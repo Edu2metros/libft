@@ -1,4 +1,4 @@
-# Libft
+# ![Libft](https://github.com/Eduu19/42-project-badges/blob/main/badges/libftm.png?raw=true) Libft!
 This project creates custom implementations of standard C library functions.
 
 
