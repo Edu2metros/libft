@@ -6,7 +6,7 @@
 /*   By: eddos-sa <eddos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 13:56:46 by eddos-sa          #+#    #+#             */
-/*   Updated: 2023/08/10 12:49:20 by eddos-sa         ###   ########.fr       */
+/*   Updated: 2024/01/03 11:31:08 by eddos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int	ft_isalnum(int digit)
 {
-	if ((digit >= 'a' && digit <= 'z') || (digit >= 'A' && digit <= 'Z'))
-		return (1);
-	else if (digit >= '0' && digit <= '9')
-		return (1);
-	else
-		return (0);
+	return ((digit >= 'a' && digit <= 'z') || (digit >= 'A' && digit <= 'Z')
+		|| (digit >= '0' && digit <= '9'));
 }
