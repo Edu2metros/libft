@@ -6,20 +6,20 @@
 /*   By: eddos-sa <eddos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 17:34:58 by eddos-sa          #+#    #+#             */
-/*   Updated: 2024/04/18 12:24:27 by eddos-sa         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:57:16 by eddos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <stdarg.h>
 #include "../libft.h"
+#include <stdarg.h>
 
-static int ft_putchar_fd_printf(int fd, char c)
+static int	ft_putchar_fd_printf(int fd, char c)
 {
 	write(fd, &c, 1);
 	return (1);
 }
 
-static int ft_putstr_fd_printf(int fd, char *s)
+static int	ft_putstr_fd_printf(int fd, char *s)
 {
 	int	count;
 
@@ -35,10 +35,12 @@ static int ft_putstr_fd_printf(int fd, char *s)
 	return (count);
 }
 
-static int ft_putnbr_fd_printf(int fd, int nbr)
+static int	ft_putnbr_fd_printf(int fd, int nbr)
 {
-	char *str = "0123456789";
-	int count;
+	char	*str;
+	int		count;
+
+	str = "0123456789";
 	count = 0;
 	if (nbr < 0)
 	{
@@ -46,13 +48,13 @@ static int ft_putnbr_fd_printf(int fd, int nbr)
 		count++;
 		nbr *= -1;
 	}
-	if(nbr / 10 > 0)
+	if (nbr / 10 > 0)
 		count += ft_putnbr_fd_printf(fd, nbr / 10);
 	count += ft_putchar_fd_printf(fd, str[nbr % 10]);
 	return (count);
 }
 
-static int ft_parse_format(int fd, const char *format, int *i, va_list args)
+static int	ft_parse_format(int fd, const char *format, int *i, va_list args)
 {
 	int	count;
 
@@ -80,12 +82,11 @@ int	ft_printf_fd(int fd, const char *format, ...)
 	i = 0;
 	while (format[i])
 	{
-		if(format[i] != '%')
+		if (format[i] != '%')
 			count += ft_putchar_fd_printf(fd, format[i]);
 		else
 			count += ft_parse_format(fd, format, &i, args);
 		i++;
-		
 	}
 	va_end(args);
 	return (count);

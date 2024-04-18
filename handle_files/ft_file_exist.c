@@ -6,10 +6,9 @@
 /*   By: eddos-sa <eddos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:49:24 by eddos-sa          #+#    #+#             */
-/*   Updated: 2024/04/17 12:49:25 by eddos-sa         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:57:37 by eddos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../libft.h"
 
@@ -19,4 +18,3 @@ int	file_exist(char *file_name)
 		return (0);
 	return (1);
 }
-

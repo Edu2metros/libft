@@ -6,15 +6,15 @@
 /*   By: eddos-sa <eddos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 11:52:06 by eddos-sa          #+#    #+#             */
-/*   Updated: 2024/04/17 16:28:08 by eddos-sa         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:57:25 by eddos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
-# endif
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 1000
+#endif
 
 static char	*get_next(char *newline)
 {

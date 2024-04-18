@@ -6,18 +6,18 @@
 /*   By: eddos-sa <eddos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 20:25:48 by eddos-sa          #+#    #+#             */
-/*   Updated: 2024/04/17 12:33:51 by eddos-sa         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:56:57 by eddos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int    ft_array_len(char **array)
+int	ft_array_len(char **array)
 {
-    int    i;
+	int	i;
 
-    i = 0;
-    while (array[i] != NULL)
-        i++;
-    return (i);
+	i = 0;
+	while (array[i] != NULL)
+		i++;
+	return (i);
 }
